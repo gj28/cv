@@ -12,9 +12,9 @@ const projects = [
     {
         id: 1,
         image: product_destination,
-        title: 'Podstream - Podcast Streaming Application',
+        title: 'AudioWave - Podcast Streaming Application',
         github: 'https://github.com/gj28/Podcast',
-        live: 'https://Podcast.onrender.com',
+        live: 'https://podcast-front.onrender.com',
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const projects = [
         image: trillo,
         title: 'OCEAN - Project Management Application',
         github: 'https://github.com/gj28/OCEAN-Project-Management',
-        live: 'https://github.io',
+        live: 'https://ocean-uktd.onrender.com/',
     },
     {
         id: 4,
