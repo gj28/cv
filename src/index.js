@@ -1,12 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import Header from './header';
 import Nav from './nav';
-import About from './about';
-import Experience from './experience';
-import Achievement from './achievement';
-import Portfolio from './portfolio';
+import Header from './header';
+import Skills from './about';
+import Experience from './achievement';
+import Projects from './portfolio';
 import ContactMe from './contact_me';
 import Footer from './footer';
 
@@ -16,12 +15,11 @@ class App extends React.Component {
     render() {
         return(
             <>
-                <Header />
                 <Nav />
-                <About />
+                <Header />
+                <Skills />
                 <Experience />
-                <Achievement />
-                <Portfolio />
+                <Projects />
                 <ContactMe />
                 <Footer />
             </>

@@ -1,26 +1,15 @@
 import React from 'react';
 
-import './css/footer.css';
-
-class Footer extends React.Component {
-    render() {
-        return(
-            <footer>
-                <a className="footer__logo" href="#home">Gaurav Jadhav</a>
-
-                <ul className="permalinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-
-                <div className="footer__copyright">@Gaurav Jadhav. All rights reserved.</div>
-            </footer>
-        );
-    }
-}
+const Footer = () => {
+    return (
+        <footer style={{ padding: '2rem 0', textAlign: 'center', borderTop: '1px solid var(--border-color)' }}>
+            <div className="container">
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', fontFamily: 'var(--font-mono)' }}>
+                    &copy; 2026 Gaurav Jadhao. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    );
+};
 
 export default Footer;

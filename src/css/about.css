@@ -1,34 +1,13 @@
 .about__container
 {
-    display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.about__me
-{
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
-    display: grid;
-    place-items: center;
-} 
 
-.about__me-image
-{
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;
-    overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
-}
-
-.about__me-image:hover
-{
-    transform: rotate(0);
-}
 
 .about__cards
 {
@@ -39,25 +18,27 @@
 
 .about__card
 {
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(5px);
 }
 
 .about__card:hover
 {
-    background: transparent;
+    transform: translateY(-5px);
     border-color: var(--color-primary-variant);
-    cursor: default;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
 }
 
 .about__icon
 {
-    color: var(--color-primary);
-    font-size: 1.4rem;
+    color: var(--color-primary-variant);
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 

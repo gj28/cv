@@ -1,62 +1,110 @@
 import React from 'react';
-import about_me from "./images/pp2.jpg";
-import { FaAward } from "react-icons/fa";
-import { VscFolderLibrary } from "react-icons/vsc";
 
-import './css/about.css'
-
-class About extends React.Component {
-    render() {
-        return(
-            <section id="about">
-                <h2>Get To Know</h2>
-                <h1>About Me</h1>
-
-                <div className="container about__container">
-                    <div className="about__me">
-                        <div className="about__me-image">
-                            <img src={about_me} alt="About Me" />
-                        </div>
-                    </div>
-
-                    <div className="about__content">
-                        <div className="about__cards">
-                            <article className="about__card">
-                                <FaAward className="about__icon" />
-                                <h5>Education</h5>
-                                <small>Bachelor's in Computer Engineering</small>
-                            </article>
-
-                            <article className="about__card">
-                                <VscFolderLibrary className="about__icon" />
-                                <h5>Projects</h5>
-                                <small>10+ projects</small>
-                            </article>
-                        </div>
-
-                        <p>
-                        Greetings! I'm Gaurav Jadhav, a forward-thinking Computer Science and Engineering student based in Nagpur, India, 
-                        currently pursuing my Bachelor's degree at GH Raisoni Institute Of Engineering And Technology. My diverse skill set 
-                        encompasses languages like Java, C/C++, JavaScript, and frameworks such as React JS and React Native. As a Software 
-                        Development Intern at SenseLive Technologies, I'm actively involved in MEARN stack development, contributing to real-time 
-                        projects and implementing backend cloud functions with AWS. I thrive on the challenges of crafting efficient RESTful APIs 
-                        using technologies like Node Js, Axios, and Next Js.
-                        </p>
-                        <p>
-                        Beyond coding, I have a strong foundation in ethical hacking, demonstrated during my stint as a DevOps Intern at RedHat, 
-                        where I developed an Authentication Bypass tool and conducted comprehensive scans using tools like OWASP ZAP. I believe in 
-                        the power of technology to transform ideas into impactful solutions. Let's connect and explore the boundless opportunities in 
-                        the dynamic world of technology!
-                        </p>
-
-                        <a href="https://github.com/gj28" target="_blank" className="btn btn-primary">
-                            View My Projects
-                        </a>
-                    </div>
+const Skills = () => {
+    return (
+        <section id="skills" className="section">
+            <div className="container">
+                <div className="section-header">
+                    <h2 className="section-title">Technical Expertise</h2>
+                    <p className="section-subtitle">Comprehensive stack for building production AI systems</p>
                 </div>
-            </section>
-        );
-    }
-}
+                
+                <div className="skills-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+                    
+                    {/* Generative AI & Agentic AI */}
+                    <div className="card">
+                        <div className="card-header">
+                            <span style={{width: '8px', height: '8px', backgroundColor: '#fafafa', borderRadius: '50%', marginRight: '12px'}}></span>
+                            Generative AI & Agentic AI
+                        </div>
+                        <div className="card-body">
+                            <SkillItem name="LangGraph / CrewAI" level="Expert" progress="95%" badgeColor="#8b5cf6" />
+                            <SkillItem name="AutoGen / DSPy" level="Advanced" progress="80%" badgeColor="#22c55e" />
+                            <SkillItem name="Multi-Agent Orchestration" level="Expert" progress="90%" badgeColor="#8b5cf6" />
+                        </div>
+                    </div>
 
-export default About;
+                    {/* RAG & Knowledge Systems */}
+                    <div className="card">
+                        <div className="card-header">
+                            <span style={{width: '8px', height: '8px', backgroundColor: '#fafafa', borderRadius: '50%', marginRight: '12px'}}></span>
+                            RAG & Knowledge Systems
+                        </div>
+                        <div className="card-body">
+                            <SkillItem name="Advanced RAG / GraphRAG" level="Expert" progress="95%" badgeColor="#8b5cf6" />
+                            <SkillItem name="LangChain / LlamaIndex" level="Expert" progress="90%" badgeColor="#8b5cf6" />
+                            <SkillItem name="Semantic Search Strategy" level="Advanced" progress="85%" badgeColor="#22c55e" />
+                        </div>
+                    </div>
+
+                    {/* LLMs & Multimodal AI */}
+                    <div className="card">
+                        <div className="card-header">
+                            <span style={{width: '8px', height: '8px', backgroundColor: '#fafafa', borderRadius: '50%', marginRight: '12px'}}></span>
+                            LLMs & Multimodal AI
+                        </div>
+                        <div className="card-body">
+                            <SkillItem name="OpenAI / Claude / Gemini" level="Expert" progress="95%" badgeColor="#8b5cf6" />
+                            <SkillItem name="Llama 3 / Mistral (Local)" level="Advanced" progress="85%" badgeColor="#22c55e" />
+                            <SkillItem name="LoRA / Fine-Tuning" level="Intermediate" progress="70%" badgeColor="#3b82f6" />
+                        </div>
+                    </div>
+
+                    {/* LLMOps & Observability */}
+                    <div className="card">
+                        <div className="card-header">
+                            <span style={{width: '8px', height: '8px', backgroundColor: '#fafafa', borderRadius: '50%', marginRight: '12px'}}></span>
+                            LLMOps & Observability
+                        </div>
+                        <div className="card-body">
+                            <SkillItem name="LangSmith / Phoenix" level="Advanced" progress="85%" badgeColor="#22c55e" />
+                            <SkillItem name="Promptfoo / TruLens" level="Advanced" progress="80%" badgeColor="#22c55e" />
+                            <SkillItem name="Prompt Engineering" level="Expert" progress="95%" badgeColor="#8b5cf6" />
+                        </div>
+                    </div>
+
+                    {/* Backend & Architecture */}
+                    <div className="card">
+                        <div className="card-header">
+                            <span style={{width: '8px', height: '8px', backgroundColor: '#fafafa', borderRadius: '50%', marginRight: '12px'}}></span>
+                            Backend Development
+                        </div>
+                        <div className="card-body">
+                            <SkillItem name="Python / FastAPI" level="Expert" progress="95%" badgeColor="#8b5cf6" />
+                            <SkillItem name="Kafka / Event-Driven" level="Advanced" progress="80%" badgeColor="#22c55e" />
+                            <SkillItem name="Microservices Design" level="Advanced" progress="85%" badgeColor="#22c55e" />
+                        </div>
+                    </div>
+
+                    {/* Databases & Cloud */}
+                    <div className="card">
+                        <div className="card-header">
+                            <span style={{width: '8px', height: '8px', backgroundColor: '#fafafa', borderRadius: '50%', marginRight: '12px'}}></span>
+                            Databases & Vector Stores
+                        </div>
+                        <div className="card-body">
+                            <SkillItem name="Neo4j (Graph DB)" level="Advanced" progress="85%" badgeColor="#22c55e" />
+                            <SkillItem name="Qdrant / Milvus / Chroma" level="Expert" progress="90%" badgeColor="#8b5cf6" />
+                            <SkillItem name="AWS / Azure / Docker" level="Advanced" progress="80%" badgeColor="#22c55e" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const SkillItem = ({ name, level, progress, badgeColor }) => (
+    <div className="skill-item">
+        <div className="skill-item__header">
+            <span className="skill-item__name">{name}</span>
+            <span className="badge" style={{ backgroundColor: badgeColor, color: '#fff', border: 'none' }}>{level}</span>
+        </div>
+        <div className="skill-item__bar">
+            <div className="skill-item__progress" style={{ width: progress }}></div>
+        </div>
+    </div>
+);
+
+export default Skills;

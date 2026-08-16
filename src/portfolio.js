@@ -1,86 +1,67 @@
 import React from 'react';
+import { BsGithub } from 'react-icons/bs';
 
-import './css/portfolio.css';
-import product_destination from './images/POD.png';
-import natours from './images/LOGIN_SQL.png';
-import trillo from './images/OCEAN.png';
-import sociaza from './images/fireb_logo.png'
-import FoodOrdering from './images/food shoping.png'
-import chat from './images/chat2.png'
-
-const projects = [
-    {
-        id: 1,
-        image: product_destination,
-        title: 'AudioWave - Podcast Streaming Application',
-        github: 'https://github.com/gj28/Podcast',
-        live: 'https://podcast-front.onrender.com',
-    },
-    {
-        id: 2,
-        image: sociaza,
-        title: 'User Authentication System',
-        github: 'https://github.com/gj28/Ang-firebase',
-        live: 'https://senselive-fd1ee.web.app/sign-in',
-    },
-    {
-        id: 3,
-        image: trillo,
-        title: 'OCEAN - Project Management Application',
-        github: 'https://github.com/gj28/OCEAN-Project-Management',
-        live: 'https://ocean-uktd.onrender.com/',
-    },
-    {
-        id: 4,
-        image: natours,
-        title: 'Created a Secure Login Page with PHP and MySQL',
-        github: 'https://github.com/gj28/PHP-Login',
-        live: 'https://gaurxxv.000webhostapp.com/login.php'
-    },
-    {
-        id: 5,
-        image: FoodOrdering,
-        title: 'FoodOrdering-APP',
-        github: 'https://github.com',
-        live: '',
-    },
-    {
-        id: 6,
-        image: chat,
-        title: 'Sweep-chat',
-        github: 'https://github.com',
-        live: '',
-    }
-]
-
-class Portfolio extends React.Component {
-    render() {
-        return(
-            <section id="portfolio">
-                <h2>Projects I Have Worked On</h2>
-                <h1>Featured Projects</h1>
-
-                <div className="container portfolio__container">
-                    {
-                        projects.map(({id, image, title, github, live}) => {
-                            return(
-                                <article key={id} className="portfolio__item">
-                                    <div className="portfolio__item-image">
-                                        <img src={image} alt="Logo" />
-                                    </div>
-                                    <h2>{title}</h2>
-                                    <div className="portfolio__item-cta">
-                                        <a className="btn" href={github} target="_blank" rel="noreferrer noopener">Github</a>
-                                        {live && <a className="btn btn-primary" href={live} target="_blank" rel="noreferrer noopener">Live Demo</a>}
-                                    </div>
-                                </article>
-                            );
-                        })
-                    }
+const Projects = () => {
+    return (
+        <section id="projects" className="section">
+            <div className="container">
+                <div className="section-header">
+                    <h2 className="section-title">Featured Projects</h2>
+                    <p className="section-subtitle">Open source projects and agentic architectures</p>
                 </div>
-            </section>
-        );
-    }
-}
+                
+                <div className="projects-grid">
+                    <div className="card project-card">
+                        <div className="project-card__content">
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                                <h3 className="project-card__title">Livoo</h3>
+                                <span className="badge badge-primary">Agentic PM</span>
+                            </div>
+                            <p className="project-card__desc">
+                                An Agentic Property Management system leveraging multi-agent workflows to handle maintenance requests, lease scheduling, and tenant queries autonomously. 
+                            </p>
+                            <div className="tags">
+                                <span className="badge">LangGraph</span>
+                                <span className="badge">React</span>
+                                <span className="badge">FastAPI</span>
+                                <span className="badge">In Progress</span>
+                            </div>
+                        </div>
+                        <div className="project-card__footer">
+                            <a href="https://github.com/gj28/livoo" target="_blank" rel="noreferrer" className="btn btn-outline">
+                                <BsGithub /> Code
+                            </a>
+                            <a href="https://livoo.in" target="_blank" rel="noreferrer" className="btn btn-primary">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
 
-export default Portfolio;
+                    <div className="card project-card">
+                        <div className="project-card__content">
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                                <h3 className="project-card__title">TOCSI</h3>
+                                <span className="badge badge-primary">Cybersecurity</span>
+                            </div>
+                            <p className="project-card__desc">
+                                An AI-powered antivirus platform that uses advanced behavioral analysis and localized LLM reasoning to detect and quarantine zero-day threats.
+                            </p>
+                            <div className="tags">
+                                <span className="badge">Python</span>
+                                <span className="badge">Local LLMs</span>
+                                <span className="badge">Cybersecurity</span>
+                            </div>
+                        </div>
+                        <div className="project-card__footer">
+                            <a href="https://github.com/gj28/tocsi" target="_blank" rel="noreferrer" className="btn btn-outline">
+                                <BsGithub /> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Projects;
