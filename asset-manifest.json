@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/cv/static/css/main.b8ae3b6d.css",
-    "main.js": "/cv/static/js/main.a765a701.js",
-    "static/media/food shoping.png": "/cv/static/media/food shoping.b0aa9ad913934f5104fe.png",
-    "static/media/pp2.jpg": "/cv/static/media/pp2.5635b4551f0f41aa9f34.jpg",
-    "static/media/chat2.png": "/cv/static/media/chat2.3d076394bbe10aa99338.png",
-    "static/media/POD.png": "/cv/static/media/POD.f22715b918da662985f5.png",
-    "static/media/fireb_logo.png": "/cv/static/media/fireb_logo.1cca2646469c01be9288.png",
-    "static/media/OCEAN.png": "/cv/static/media/OCEAN.ea4bdbc70c7392b70077.png",
-    "static/media/LOGIN_SQL.png": "/cv/static/media/LOGIN_SQL.9d382cee9b510d476ef9.png",
+    "main.css": "/cv/static/css/main.f889e471.css",
+    "main.js": "/cv/static/js/main.baf466bd.js",
     "index.html": "/cv/index.html",
-    "main.b8ae3b6d.css.map": "/cv/static/css/main.b8ae3b6d.css.map",
-    "main.a765a701.js.map": "/cv/static/js/main.a765a701.js.map"
+    "main.f889e471.css.map": "/cv/static/css/main.f889e471.css.map",
+    "main.baf466bd.js.map": "/cv/static/js/main.baf466bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8ae3b6d.css",
-    "static/js/main.a765a701.js"
+    "static/css/main.f889e471.css",
+    "static/js/main.baf466bd.js"
   ]
 }
